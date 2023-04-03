@@ -21,6 +21,7 @@
   type Name = 'name';
   let JakeName: Name;
   JakeName = 'name';
+  // JakeName = 'age'; // Error
   
 
 } 
