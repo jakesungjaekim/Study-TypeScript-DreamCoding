@@ -29,4 +29,45 @@
 
   person2 = null;
   person2 = 'Jake';
+
+  // 기본타입 #2 
+
+  // unknown : 어떤 타입이 될지 모르는 상태, 타입스크립트에서는 unknown을 잘 사용하지 않습니다.
+  let notSure: unknown = 0;
+  notSure = 'jake';
+  notSure = true;
+
+  // any : 어떤 타입이든 사용할 수 있는 상태, 타입스크립트에서는 any를 잘 사용하지 않습니다.
+  let anything: any = 0;
+  anything = 'hello';
+
+  // void : 함수에서 아무것도 리턴하지 않는 상태
+  function print(): void {
+    console.log('hello');
+    return;
+  }
+
+  // never : 절대 리턴하지 않는 상태
+  function throwError(message: string): never {
+    //case1
+    // message -> server (log)
+    throw new Error(message);
+
+    //case2
+    while (true) { 
+      // ????
+    }
+    
+    // case3
+    // return
+  }
+
+  // object : object타입은 원시타입이 아닌 것들을 할당할 수 있습니다.
+  // object타입또한 잘 사용하지 않고, 사용할 경우 구체적으로 명시하는 것이 좋습니다.
+  let obj: object = [1, 4 ,5];
+  function acceptSomeObject(obj: object) {}
+
+  acceptSomeObject({name: 'jake'});
+  acceptSomeObject({animal: 'dog'});
+
 }

@@ -44,7 +44,7 @@
   let unusable: void = undefined; // 💩
 
   // never
-  function throwError(message: string): never {
+  function throwError11(message: string): never {
     // message -> server (log)
     throw new Error(message);
     while (true) {}
@@ -53,7 +53,7 @@
 
   // objet
   let obj: object; // 💩
-  function acceptSomeObject(obj: object) {}
+  function acceptSomeObject11(obj: object) {}
   acceptSomeObject({ name: 'ellie' });
   acceptSomeObject({ animal: 'dog' });
 }
